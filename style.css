@@ -121,6 +121,8 @@ nav li:hover {
     align-items: center;
     max-width: 1000px;
     width: 100%;
+    padding: 0 40px;
+    margin: 0 auto;
 }
 
 .reveal {
@@ -358,27 +360,17 @@ h2 {
     line-height: 1.6;
     margin-bottom: 18px;
 }
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
+
+@media (max-width: 780px) {
+    /* hide navigation sections */
+    nav ul {
+        display: none;
+    }
 
     nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-        padding: 20px;
+        padding: 20px 30px;
     }
-
-    nav ul {
-        gap: 20px;
-    }
-
-    nav li,
-    .logo {
-        font-size: 18px;
-    }
-
+    
     .small-text,
     h1 {
         font-size: 32px;
@@ -386,5 +378,11 @@ h2 {
 
     .description {
         font-size: 18px;
+    }
+}
+
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 }
